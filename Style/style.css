@@ -1,0 +1,30 @@
+body {
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    background: #efecd8
+}
+
+/* html {
+    -webkit-filter: invert(100%);
+    -moz-filter: invert(100%);
+    -o-filter: invert(100%);
+    -ms-filter: invert(100%);
+} */
+
+div#drawing {
+    width: calc(100% - 4px);
+    height: calc(100% - 134px);
+    overflow-y: scroll;
+    border: 2px solid transparent;
+    background: transparent;
+}
+
+div#rank {
+    border-radius: 5px;
+    box-shadow: 0 0 2px black
+}
+
+span.previous {
+    color: blue;
+}

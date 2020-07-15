@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>STBins</title>
+
+        <!-- style files -->
+        <link rel="stylesheet" type="text/css" href="Style/style.css">
+        <!-- <link rel="stylesheet" type="text/css" href="Style/jqcloud.css"> -->
+    </head>
+    <!-- <body bgcolor='black'> -->
+    <body>
+        <div>
+            <h1>
+                STBins <span style="font-size: 12px">Visual Analysis of Multiple Data Sequences using Temporal Binning</span>
+            </h1>
+
+            <!-- Panel - data -->
+            <p>
+                &#9654 Database: &nbsp <select id="table">
+                    <option value="photo_sorted">photo_sorted</option>
+                    <option value="adding1_1">adding1_1</option>
+                    <option value="sorter1_1">sorter1_1</option>
+                    <option value="lup3_8">lup3_8</option>
+                    <option value="lup3_8_2">lup3_8_2</option>
+                    <option value="lup_12">lup_12</option>
+                    <option value="lup_12_2">lup_12_2</option>
+                    <option value="lup_16">lup_16</option>
+                    <option value="lup_16_2">lup_16_2</option>
+                </select>
+                &nbsp&nbsp&nbsp &#9654 Variable of series: &nbsp <select id="series">
+                    <option value="threadid">Thread ID</option>
+                    <option value="methodname">Method Name</option>
+                    <option value="statea">State A</option>
+                    <option value="stateb">State B</option>
+                    <option value="userid" selected>User ID</option>
+                    <option value="tag">Tag</option>
+                </select>
+                &nbsp&nbsp&nbsp &#9654 Variable of observation: &nbsp <select id="attr">
+                    <option value="threadid">Thread ID</option>
+                    <option value="methodname">Method Name</option>
+                    <option value="statea">State A</option>
+                    <option value="stateb">State B</option>
+                    <option value="userid">User ID</option>
+                    <option value="tag" selected>Tag</option>
+                </select>
+            </p>
+
+            <!-- Panel - time -->
+            <p>
+                <!-- default window size: SCCs <1000000>, Photo <3600000000000> -->
+                &#9654 Size of time window (ns): &nbsp <input type="number" id='window' value=3600000000000></input> 
+                &nbsp&nbsp&nbsp &#9654 Number of windows: &nbsp <input type="number" id='number' value=20></input>
+                &nbsp&nbsp&nbsp &#9654 <input type="checkbox" id="arc" checked="true">Arc
+                &nbsp&nbsp&nbsp &#9654 <input type="checkbox" id="sorted">Local
+            </p>
+
+            <!-- Panel - control -->
+            <p>
+                <div style="display: none;">&#9654 <button id='start'>Start</button></div>
+                &#9654 <button id='Pause'>Start / Pause</button>
+                &nbsp(press [ENTER] to pause/restart the flow)  
+                &nbsp&nbsp&nbsp &#9654 Jump to (window): &nbsp <input type="number" id='jump' value=0></input>
+                &nbsp&nbsp&nbsp &#9654 Speed (ms): &nbsp <input type="number" id='speed' value=500></input>
+            </p>
+            
+            <!-- Main view -->
+            <div id="drawing"></div>
+            <div id='detail' class="ui-widget-content" style="width: 220px; height: 260px; display: block; right: 10px; bottom: 10px; position: absolute; cursor: move">
+                <div id="rank" style="width: 200px; height: 240px; background-color: white; border: 10px solid transparent; overflow: scroll"></div>
+            </div>
+
+            <div id="info" style="position: absolute; bottom: 5px; width: auto; height: auto; display: none"></div>
+        </div>
+
+        <!-- libraries -->       
+        <script src="https://rawgithub.com/mziccard/node-timsort/master/build/timsort.js"></script>
+        <script type="text/javascript" src="Libraries/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="Libraries/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="Libraries/svg.js"></script>   
+
+        <!-- classes -->                             
+        <script type="text/javascript" src="Javascripts/statis.js"></script>
+        <script type="text/javascript" src="Javascripts/draw.js"></script>
+        <script type="text/javascript" src="Javascripts/main.js"></script>
+    </body>
+</html>
