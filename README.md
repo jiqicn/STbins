@@ -4,7 +4,7 @@ STBins is designed for visual tracking of individual data sequences and also for
 
 ## How to Use STBins
 
-Please watch the following video to know how to use STBins:
+Please watch the following video to know how to use STBins.
 
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/5TcYFbVTOE4/0.jpg)](https://www.youtube.com/watch?v=5TcYFbVTOE4)
 
