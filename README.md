@@ -2,13 +2,13 @@
 
 STBins is designed for visual tracking of individual data sequences and also for comparison of sequences.
 
-## User Manual
+## How to Use STBins
 
 Please watch the following video to know how to use STBins:
 
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/5TcYFbVTOE4/0.jpg)](https://www.youtube.com/watch?v=5TcYFbVTOE4)
 
-## Running on Your Local Environment
+## How to Run STBins on Your Local Environment
 
 STBins requires node.js and npm to be installed locally. After downloading the repository, navigate to `Javascripts` under the project folder and run
 
